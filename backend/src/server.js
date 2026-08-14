@@ -7,6 +7,8 @@ const app = express();
 
 connectDB();
 
+app.use(express.json());
+
 app.use("/api/notes", notesRouter);
 
 app.listen(PORT, () => console.log(`Server is running on the PORT: ${PORT}`));
